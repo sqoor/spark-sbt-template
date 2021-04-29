@@ -2,16 +2,18 @@
 
 version := "1.0"
 
+val sparkVersion = "3.1.1"
+
 name := "spark-sbt-template"
 
 logBuffered in Test := false
 
 scalaVersion := "2.12.10"
 
-libraryDependencies += "org.apache.spark" %% "spark-core" % "2.4.3" % "provided"
-libraryDependencies += "org.apache.spark" %% "spark-streaming" % "2.4.3" % "provided"
-libraryDependencies += "org.apache.spark" %% "spark-streaming-kinesis-asl" % "2.4.3"
-libraryDependencies += "org.apache.spark" %% "spark-sql" % "2.4.3" % "provided"
+libraryDependencies += "org.apache.spark" %% "spark-core" % sparkVersion % "provided"
+libraryDependencies += "org.apache.spark" %% "spark-sql" % sparkVersion % "provided"
+//libraryDependencies += "org.apache.spark" %% "spark-streaming" % sparkVersion % "provided"
+//libraryDependencies += "org.apache.spark" %% "spark-streaming-kinesis-asl" % sparkVersion
 
 libraryDependencies += "org.scalactic" %% "scalactic" % "3.0.8"
 libraryDependencies += "org.scalatest" %% "scalatest" % "3.0.8" % "test"
