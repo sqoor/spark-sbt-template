@@ -1,9 +1,9 @@
-import org.apache.spark.sql.SparkSession
+import org.apache.spark.sql.{Dataset, SparkSession}
 
 object DstiJob {
 
   def run(spark: SparkSession): Long = {
-    val df = spark.range(1000L)
+    val df: Dataset[java.lang.Long] = spark.range(1000L)
     df.count
   }
 }
