@@ -9,9 +9,15 @@ To package your project:
 sbt assembly
 ```
 
-## Run
+## Deploy 
 
-spark-submit [options] <app jar | python file | R file> [app arguments]   
+Copy/Upload the fatjar to the destination
+```
+TARGET_LOCATION=<location>
+cp target/scala-2.12/spark-sbt-template-assembly-1.0.jar $TARGET_LOCATION
+```
+
+## Run
 
 To run your project locally:
 ```
